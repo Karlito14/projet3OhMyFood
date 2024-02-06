@@ -1,6 +1,7 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$grey: #EAEAEA;
 
 $font-title: 'Shrikhand', serif;
 $font-text: 'Roboto', sans-serif;
@@ -14,8 +15,6 @@ $font-text: 'Roboto', sans-serif;
 
 body {
     max-width: 1440px;
-    padding: 0px 40px;
-    min-width: 320px;
     margin: 0 auto;
 }
 
@@ -25,4 +24,51 @@ a{
 
 ul{
     list-style-type: none;
+}
+
+/***************** Header *****************/
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__divImage {
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.55);
+
+        &__image {
+            width: 200px;
+            padding: 20px;
+            display: block;
+            margin: 0 auto;
+        }
+    }      
+
+    &__divInput {
+        width: 100%;
+        position: relative;
+
+        &__input {
+            width: 100%;
+            text-align: center;
+            background-color: $grey;
+            border: none;
+            padding: 20px;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            font-size: 16px;
+        }
+
+        & i {
+           position: absolute;
+           left: 28%;
+           top: 19px;
+           @media (min-width: 768px) {
+            left: 40%;
+           }
+           @media (min-width: 1024px) {
+            left: 42%;
+           }
+        }
+    } 
 }

@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+  <head>
     <!-- - - - - - - - -   Meta charset   - - - - - - - - -->
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <!-- - - - - - - - -   Meta viewport   - - - - - - - - -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Oh My Food</title>
     <!-- - - - - - - - -   Favicon   - - - - - - - - -->
     <link rel="icon" type="image/png" href="assets/images/logo/favicon.png" />
     <!-- - - - - - - - -   Font Google   - - - - - - - - -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
     <!-- - - - - - - - -    Fichier CSS   - - - - - - - - -->
-    <link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- - - - - - - - -    Header   - - - - - - - - -->
+    <header class="header">
+        <div class="header__divImage">
+            <img
+                class="header__divImage__image"
+                src="assets/images/logo/ohmyfood.png"
+                alt="logo Oh my food"
+            />
+        </div>
+        
+        <div class="header__divInput">
+            <input
+                class="header__divInput__input"
+                type="text"
+                required
+                pattern="[a-zA-Z ]+"
+                name="location"
+                autocomplete="off"
+                placeholder="Paris, Belleville"
+            />
+            <i class="fa-solid fa-location-dot"></i>
+        </div>
+    </header>
     <!-- - - - - - - - -   Icons Font   - - - - - - - - -->
     <script
       src="https://kit.fontawesome.com/a8c57682fc.js"
       crossorigin="anonymous"
     ></script>
-</body>
+  </body>
 </html>
