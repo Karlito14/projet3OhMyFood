@@ -9,42 +9,57 @@
     <!-- - - - - - - - -   Favicon   - - - - - - - - -->
     <link rel="icon" type="image/png" href="assets/images/logo/favicon.png" />
     <!-- - - - - - - - -   Font Google   - - - - - - - - -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
     <!-- - - - - - - - -    Fichier CSS   - - - - - - - - -->
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
     <!-- - - - - - - - -    Header   - - - - - - - - -->
     <header class="header">
-        <div class="header__divImage">
-            <img
-                class="header__divImage__image"
-                src="assets/images/logo/ohmyfood.png"
-                alt="logo Oh my food"
-            />
-        </div>
-        
-        <div class="header__divInput">
-            <input
-                class="header__divInput__input"
-                type="text"
-                required
-                pattern="[a-zA-Z ]+"
-                name="location"
-                autocomplete="off"
-                placeholder="Paris, Belleville"
-            />
-            <i class="fa-solid fa-location-dot"></i>
-        </div>
+      <div class="header__divImage">
+        <img
+          class="header__divImage__image"
+          src="assets/images/logo/ohmyfood.png"
+          alt="logo Oh my food"
+        />
+      </div>
+
+      <div class="header__divInput">
+        <input
+          class="header__divInput__input"
+          type="text"
+          required
+          pattern="[a-zA-Z ]+"
+          name="location"
+          autocomplete="off"
+          placeholder="Paris, Belleville"
+        />
+        <i class="fa-solid fa-location-dot"></i>
+      </div>
     </header>
 
     <!-- - - - - - - - -    Introduction   - - - - - - - - -->
     <section class="intro">
-        <h1 class="intro__title">Réservez le menu qui vous convient</h1>
-        <p class="intro__paragraphe">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
-        <a class="intro__button" href="#">Explorer nos restaurants</a>
+      <h1 class="intro__title">Réservez le menu qui vous convient</h1>
+      <p class="intro__paragraphe">
+        Découvrez des restaurants d’exception, sélectionnés par nos soins.
+      </p>
+      <a class="intro__button" href="#">Explorer nos restaurants</a>
+    </section>
+
+    <!-- - - - - - - - -    Fonctionnement   - - - - - - - - -->
+    <section class="fonctionnement">
+      <h2 class="fonctionnement__title">Fonctionnement</h2>
+      <ol class="fonctionnement__ol">
+        <li class="fonctionnement__ol__li"><i class="fa-solid fa-mobile-screen-button fonctionnement__ol__li__icon"></i>Choisissez un restaurant</li>
+        <li class="fonctionnement__ol__li"><i class="fa-solid fa-list-ul fonctionnement__ol__li__icon"></i>Composez votre menu</li>
+        <li class="fonctionnement__ol__li"><i class="fa-solid fa-store fonctionnement__ol__li__icon fonctionnement__ol__li__icon--color"></i>Dégustez au restaurant</li>
+      </ol>
     </section>
     <!-- - - - - - - - -   Icons Font   - - - - - - - - -->
     <script

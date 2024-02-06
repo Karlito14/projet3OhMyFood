@@ -4,6 +4,7 @@ $color-tertiary: #99E2D0;
 $grey-darken: #353535;
 $bg-input: #EAEAEA;
 $background: #F6F6F6;
+$font-weight: 500;
 
 $font-title: 'Shrikhand', serif;
 $font-text: 'Roboto', sans-serif;
@@ -13,10 +14,10 @@ $font-text: 'Roboto', sans-serif;
     color: white;
     background: linear-gradient($color-secondary, $color-primary);
     padding: 20px;
-    font-weight: 500;
-    border-radius: 50px;
+    font-weight: $font-weight;
+    border-radius: 25px;
     font-size: 16px;
-    transition: all 0.4s;
+    transition: all 0.4s ease-out;
 
     &:hover {
         background: linear-gradient(#f78fd9, #906abe);
@@ -35,16 +36,11 @@ $font-text: 'Roboto', sans-serif;
 }
 
 body {
-    max-width: 1440px;
     margin: 0 auto;
 }
 
 a{
     text-decoration: none;
-}
-
-ul{
-    list-style-type: none;
 }
 
 /************************ Header ************************/
@@ -105,7 +101,7 @@ ul{
     align-items: center;
     justify-content: center;
     background-color: $background;
-    padding: 40px;
+    padding: 30px;
 
     &__title {
         margin-bottom: 30px;
@@ -123,5 +119,79 @@ ul{
 
     &__button {
         @include button;
+    }
+}
+
+/*********************** Fonctionnement ***********************/
+.fonctionnement {
+    padding: 50px 30px;
+
+    @media(min-width: 1200px) {
+        padding: 30px 180px;
+    }
+
+    &__title{
+        margin-bottom: 20px;
+    }
+
+    &__ol {
+        counter-reset: nombre;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__li{
+            list-style-type: none;
+            counter-increment: nombre;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 20px;
+            height: 78px;
+            background-color: $background;
+            border-radius: 20px;
+            font-weight: $font-weight;
+            width: 100%;
+            position: relative;
+            padding-left: 40px;
+            padding-right: 15px;
+            @include boxShadow(0, 4px, 15px, 0.15);
+
+            @media (min-width: 768px) {
+                width: 30%;
+            }
+
+            &:before{
+                content: counter(nombre);
+                background-color: $color-primary;
+                border-radius: 50%;
+                padding: 5px 5px;
+                color: white;
+                font-weight: $font-weight;
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                text-align: center;
+                position: absolute;
+                left: -13px;
+                top: 20px;
+            }
+
+            &__icon {
+                margin-right: 20px;
+                color: #7E7E7E;
+
+                &--color{
+                    color: $color-primary;
+                }
+            }
+        }
+        
     }
 }
