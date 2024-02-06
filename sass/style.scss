@@ -1,16 +1,37 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$grey: #EAEAEA;
+$grey-darken: #353535;
+$bg-input: #EAEAEA;
+$background: #F6F6F6;
 
 $font-title: 'Shrikhand', serif;
 $font-text: 'Roboto', sans-serif;
 
+@mixin button {
+    border: none;
+    color: white;
+    background: linear-gradient($color-secondary, $color-primary);
+    padding: 20px;
+    font-weight: 500;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: all 0.4s;
+
+    &:hover {
+        background: linear-gradient(#f78fd9, #906abe);
+    }
+}
+
+@mixin boxShadow($x, $y, $blur, $opacity) {
+    box-shadow: $x $y $blur rgba(0, 0, 0, $opacity);
+}
 /***************** Style Général *****************/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $font-text;
 }
 
 body {
@@ -26,7 +47,7 @@ ul{
     list-style-type: none;
 }
 
-/***************** Header *****************/
+/************************ Header ************************/
 .header {
     display: flex;
     flex-direction: column;
@@ -35,7 +56,8 @@ ul{
 
     &__divImage {
         width: 100%;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.55);
+        z-index: 1;
+        @include boxShadow(0, 2px, 4px, 0.15);
 
         &__image {
             width: 200px;
@@ -48,21 +70,23 @@ ul{
     &__divInput {
         width: 100%;
         position: relative;
+        @include boxShadow(0, 4px, 4px, 0.25);
 
         &__input {
             width: 100%;
             text-align: center;
-            background-color: $grey;
+            background-color: $bg-input;
             border: none;
             padding: 20px;
-            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
             font-size: 16px;
+            color: $grey-darken;
         }
 
         & i {
            position: absolute;
            left: 28%;
            top: 19px;
+           color: $grey-darken;
            @media (min-width: 768px) {
             left: 40%;
            }
@@ -71,4 +95,33 @@ ul{
            }
         }
     } 
+}
+
+/*********************** Introduction ***********************/
+.intro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: $background;
+    padding: 40px;
+
+    &__title {
+        margin-bottom: 30px;
+        @media (min-width: 768px) {
+            font-size: 40px;
+        }
+    }
+
+    &__paragraphe {
+        font-weight: 300;
+        margin-bottom: 30px;
+        font-size: 18px;
+        color: $grey-darken;
+    }
+
+    &__button {
+        @include button;
+    }
 }
