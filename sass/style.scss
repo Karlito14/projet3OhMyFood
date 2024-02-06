@@ -1,0 +1,28 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+$font-title: 'Shrikhand', serif;
+$font-text: 'Roboto', sans-serif;
+
+/***************** Style Général *****************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1440px;
+    padding: 0px 40px;
+    min-width: 320px;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
