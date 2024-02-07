@@ -18,9 +18,11 @@ $font-text: 'Roboto', sans-serif;
     border-radius: 25px;
     font-size: 16px;
     transition: all 0.4s ease-out;
+    @include boxShadow(0, 4px, 10px, 0.25);
 
     &:hover {
         background: linear-gradient(#f78fd9, #906abe);
+        @include boxShadow(0, 4px, 10px, 0.35);
     }
 }
 
@@ -41,7 +43,10 @@ body {
 
 a{
     text-decoration: none;
-    color: black;
+}
+
+li{
+    list-style-type: none;
 }
 
 /************************ Header ************************/
@@ -214,6 +219,14 @@ a{
         flex-direction: column;
         justify-content: center;
 
+        & a {
+            margin-bottom: 20px;
+
+            @media (min-width: 768px) {
+                margin-bottom: 0;
+            }
+        }
+
         @media (min-width: 768px) {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -227,7 +240,6 @@ a{
     border-radius: 15px;
     background-color: white;
     position: relative;
-    margin-bottom: 20px;
     @include boxShadow(0, 4px, 15px, 0.1);
 
     &__nouveau {
@@ -249,6 +261,7 @@ a{
     }
 
     &__content {
+        color: black;
         padding: 20px 30px;
         display: flex;
         justify-content: space-between;
@@ -277,4 +290,39 @@ a{
             }
         }
     }
+}
+
+/*********************** Footer ***********************/
+.footer {
+    background-color: $grey-darken;
+    color: #fff;
+    list-style-type: none;
+    padding: 20px 30px;
+
+    &__title{
+        font-family: $font-title;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    &__ul {
+
+        &__li{
+            margin-bottom: 10px;
+            
+            &__lien {
+                color: white;
+
+                &--bold {
+                    font-weight: 500;
+
+                    & i {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+
 }
