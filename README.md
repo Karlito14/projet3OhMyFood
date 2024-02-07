@@ -7,3 +7,4 @@ Réalisé par [Carlos Leiroz](https://www.linkedin.com/in/carlos-leiroz/)
 * Dynamiser le site avec de nombreuses animations réalisées uniquement en CSS
 * Site totalement **responsive**
 * Réalisé avec le préprocesseur **SASS**
+* Utilisation de frameworks ou **JavaScript** proscrite

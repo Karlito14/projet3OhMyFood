@@ -2,21 +2,21 @@
 <html lang="fr">
   <head>
     <!-- - - - - - - - -   Meta charset   - - - - - - - - -->
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <!-- - - - - - - - -   Meta viewport   - - - - - - - - -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh My Food</title>
     <!-- - - - - - - - -   Favicon   - - - - - - - - -->
-    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png" />
+    <link rel="icon" type="image/png" href="assets/images/logo/favicon.png">
     <!-- - - - - - - - -   Font Google   - - - - - - - - -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
       rel="stylesheet"
-    />
+    >
     <!-- - - - - - - - -    Fichier CSS   - - - - - - - - -->
-    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/style.css">
   </head>
   <body>
     <!-- - - - - - - - -    Header   - - - - - - - - -->
@@ -26,7 +26,7 @@
           class="header__divImage__image"
           src="assets/images/logo/ohmyfood.png"
           alt="logo Oh my food"
-        />
+        >
       </div>
 
       <div class="header__divInput">
@@ -38,7 +38,7 @@
           name="location"
           autocomplete="off"
           placeholder="Paris, Belleville"
-        />
+        >
         <i class="fa-solid fa-location-dot"></i>
       </div>
     </header>
@@ -56,11 +56,105 @@
     <section class="fonctionnement">
       <h2 class="fonctionnement__title">Fonctionnement</h2>
       <ol class="fonctionnement__ol">
-        <li class="fonctionnement__ol__li"><i class="fa-solid fa-mobile-screen-button fonctionnement__ol__li__icon"></i>Choisissez un restaurant</li>
-        <li class="fonctionnement__ol__li"><i class="fa-solid fa-list-ul fonctionnement__ol__li__icon"></i>Composez votre menu</li>
-        <li class="fonctionnement__ol__li"><i class="fa-solid fa-store fonctionnement__ol__li__icon fonctionnement__ol__li__icon--color"></i>Dégustez au restaurant</li>
+        <li class="fonctionnement__ol__li">
+          <i
+            class="fa-solid fa-mobile-screen-button fonctionnement__ol__li__icon"
+          ></i
+          >Choisissez un restaurant
+        </li>
+        <li class="fonctionnement__ol__li">
+          <i class="fa-solid fa-list-ul fonctionnement__ol__li__icon"></i
+          >Composez votre menu
+        </li>
+        <li class="fonctionnement__ol__li">
+          <i
+            class="fa-solid fa-store fonctionnement__ol__li__icon fonctionnement__ol__li__icon--color"
+          ></i
+          >Dégustez au restaurant
+        </li>
       </ol>
     </section>
+
+    <!-- - - - - - - - -    Fonctionnement   - - - - - - - - -->
+    <main class="restaurants">
+      <h2 class="restaurants__title">Restaurants</h2>
+      <div class="restaurants__content">
+        <a href="#">
+          <article class="article">
+            <img
+              src="assets/images/restaurants/palette-du-gout.jpg"
+              alt="Restaurant La palette du goût"
+              class="article__img"
+            >
+            <div class="article__content">
+              <div>
+                <h3 class="article__content__title">La palette du goût</h3>
+                <p class="article__content__location">Ménilmontant</p>
+              </div>
+              <i class="fa-regular fa-heart article__content__icon"></i>
+              <i class="fa-solid fa-heart article__content__icon article__content__icon--solid"></i>
+            </div>
+            <mark class="article__nouveau">Nouveau</mark>
+          </article>
+        </a>
+
+        <a href="#">
+          <article class="article">
+            <img
+              src="assets/images/restaurants/note-enchantee.jpg"
+              alt="Restaurant La note enchantée"
+              class="article__img"
+            >
+            <div class="article__content">
+              <div>
+                <h3 class="article__content__title">La note enchantée</h3>
+                <p class="article__content__location">Charonne</p>
+              </div>
+              <i class="fa-regular fa-heart article__content__icon"></i>
+              <i class="fa-solid fa-heart article__content__icon article__content__icon--solid"></i>
+            </div>
+            <mark class="article__nouveau">Nouveau</mark>
+          </article>
+        </a>
+
+        <a href="#">
+          <article class="article">
+            <img
+              src="assets/images/restaurants/francaise.jpg"
+              alt="Restaurant À la française"
+              class="article__img"
+            >
+            <div class="article__content">
+              <div>
+                <h3 class="article__content__title">À la française</h3>
+                <p class="article__content__location">Cité Rouge</p>
+              </div>
+              <i class="fa-regular fa-heart article__content__icon"></i>
+              <i class="fa-solid fa-heart article__content__icon article__content__icon--solid"></i>
+            </div>
+          </article>
+        </a>
+
+        <a href="#">
+          <article class="article">
+            <img
+              src="assets/images/restaurants/delice-des-sens.jpg"
+              alt="Restaurant Le délice des sens"
+              class="article__img"
+            >
+            <div class="article__content">
+              <div>
+                <h3 class="article__content__title">Le délice des sens</h3>
+                <p class="article__content__location">Folie-Méricourt</p>
+              </div>
+              <i class="fa-regular fa-heart article__content__icon"></i>
+              <i class="fa-solid fa-heart article__content__icon article__content__icon--solid"></i>
+            </div>
+          </article>
+        </a>
+      </div>
+    </main>
+
     <!-- - - - - - - - -   Icons Font   - - - - - - - - -->
     <script
       src="https://kit.fontawesome.com/a8c57682fc.js"
