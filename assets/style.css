@@ -59,7 +59,7 @@ a {
     left: 40%;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .header__divInput i {
     left: 42%;
   }
@@ -178,6 +178,11 @@ a {
   padding: 30px;
   background-color: #F6F6F6;
 }
+@media (min-width: 1200px) {
+  .restaurants {
+    padding: 30px 180px;
+  }
+}
 .restaurants__title {
   margin-bottom: 20px;
 }
@@ -185,6 +190,13 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (min-width: 768px) {
+  .restaurants__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
 }
 
 .article {
@@ -228,12 +240,12 @@ a {
 .article__content__icon--solid {
   opacity: 0;
   transition: all 1s ease-in-out;
+  color: transparent;
 }
 .article__content__icon--solid:hover {
   opacity: 1;
-  background-clip: text;
-  color: transparent;
   background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
   -webkit-background-clip: text;
 }
 

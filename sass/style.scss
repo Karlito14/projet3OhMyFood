@@ -87,7 +87,7 @@ a{
            @media (min-width: 768px) {
             left: 40%;
            }
-           @media (min-width: 1024px) {
+           @media (min-width: 1200px) {
             left: 42%;
            }
         }
@@ -201,6 +201,10 @@ a{
     padding: 30px;
     background-color: $background;
 
+    @media(min-width:1200px) {
+        padding: 30px 180px;
+    }
+
     &__title {
         margin-bottom: 20px;
     }
@@ -209,6 +213,12 @@ a{
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
     }
 }
 
@@ -256,12 +266,12 @@ a{
             &--solid {
                 opacity: 0;
                 transition: all 1s ease-in-out;
+                color: transparent;
 
                 &:hover {
                     opacity: 1;
-                    background-clip: text;
-                    color: transparent;
                     background: linear-gradient($color-primary, $color-secondary);
+                    background-clip: text;
                     -webkit-background-clip: text;
                 }
             }
