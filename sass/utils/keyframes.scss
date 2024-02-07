@@ -1,0 +1,26 @@
+@use './variables.scss';
+
+@keyframes flash {
+    0% {
+        color: variables.$color-primary,;
+        text-shadow: 0 0 7px variables.$color-primary;
+    }
+    90% {
+        color: variables.$color-secondary;
+        text-shadow: none;
+    }
+    100% {
+        color: variables.$color-primary,;
+        text-shadow: 0 0 7px variables.$color-primary;
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0.9;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

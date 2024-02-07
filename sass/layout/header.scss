@@ -1,0 +1,52 @@
+@use '../utils/variables.scss';
+@use '../utils/mixins.scss';
+
+/************************ Header ************************/
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__divImage {
+        width: 100%;
+        z-index: 1;
+        @include mixins.boxShadow(0, 2px, 4px);
+
+        &__image {
+            width: 200px;
+            padding: 20px;
+            display: block;
+            margin: 0 auto;
+        }
+    }      
+
+    &__divInput {
+        width: 100%;
+        position: relative;
+        @include mixins.boxShadow(0, 4px, 4px, 0.25);
+
+        &__input {
+            width: 100%;
+            text-align: center;
+            background-color: variables.$bg-input;
+            border: none;
+            padding: 20px;
+            font-size: 16px;
+            color: variables.$grey-darken;
+        }
+
+        & i {
+           position: absolute;
+           left: 28%;
+           top: 19px;
+           color: variables.$grey-darken;
+           @media (min-width: 768px) {
+            left: 40%;
+           }
+           @media (min-width: 1200px) {
+            left: 42%;
+           }
+        }
+    } 
+}

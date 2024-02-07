@@ -1,65 +1,16 @@
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-$grey-darken: #353535;
-$bg-input: #EAEAEA;
-$background: #F6F6F6;
-$font-weight: 500;
+@use './utils/mixins.scss';
+@use './utils/variables.scss';
+@use './utils/keyframes.scss';
+@use './layout/header.scss';
+@use './layout/footer.scss';
 
-$font-title: 'Shrikhand', serif;
-$font-text: 'Roboto', sans-serif;
 
-@keyframes flash {
-    0% {
-        color: $color-primary,;
-        text-shadow: 0 0 7px $color-primary;
-    }
-    90% {
-        color: $color-secondary;
-        text-shadow: none;
-    }
-    100% {
-        color: $color-primary,;
-        text-shadow: 0 0 7px $color-primary;
-    }
-}
-
-@keyframes opacity {
-    from {
-        opacity: 0.9;
-    }
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-@mixin button {
-    border: none;
-    color: white;
-    background: linear-gradient($color-secondary, $color-primary);
-    padding: 20px;
-    font-weight: $font-weight;
-    border-radius: 25px;
-    font-size: 16px;
-    transition: all 0.4s ease-out;
-    @include boxShadow(0, 4px, 10px, 0.25);
-
-    &:hover {
-        background: linear-gradient(#f78fd9, #906abe);
-        @include boxShadow(0, 4px, 10px, 0.35);
-    }
-}
-
-@mixin boxShadow($x, $y, $blur, $opacity) {
-    box-shadow: $x $y $blur rgba(0, 0, 0, $opacity);
-}
 /***************** Style Général *****************/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: $font-text;
+    font-family: variables.$font-text;
 }
 
 body {
@@ -82,14 +33,14 @@ li{
     opacity: 0.9;
     height: 100vh;
     width: 100%;
-    background-color: $bg-input;
+    background-color: variables.$bg-input;
     margin: 0 auto;
     text-align: center;
     padding-top: 40vh;
     animation: opacity 3s ease-in-out 3s forwards;
 
     &__letter {
-        color: $color-secondary;
+        color: variables.$color-secondary;
         font-size: 30px;
         font-weight: 500;
         letter-spacing: 15px;
@@ -149,58 +100,13 @@ li{
         &:nth-child(18) {
             animation-delay: 1.7s;
         }
+        &:nth-child(19) {
+            animation-delay: 1.8s;
+        }
+        &:nth-child(20) {
+            animation-delay: 1.9s;
+        }
     }
-}
-
-
-/************************ Header ************************/
-.header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    &__divImage {
-        width: 100%;
-        z-index: 1;
-        @include boxShadow(0, 2px, 4px, 0.15);
-
-        &__image {
-            width: 200px;
-            padding: 20px;
-            display: block;
-            margin: 0 auto;
-        }
-    }      
-
-    &__divInput {
-        width: 100%;
-        position: relative;
-        @include boxShadow(0, 4px, 4px, 0.25);
-
-        &__input {
-            width: 100%;
-            text-align: center;
-            background-color: $bg-input;
-            border: none;
-            padding: 20px;
-            font-size: 16px;
-            color: $grey-darken;
-        }
-
-        & i {
-           position: absolute;
-           left: 28%;
-           top: 19px;
-           color: $grey-darken;
-           @media (min-width: 768px) {
-            left: 40%;
-           }
-           @media (min-width: 1200px) {
-            left: 42%;
-           }
-        }
-    } 
 }
 
 /*********************** Introduction ***********************/
@@ -210,7 +116,7 @@ li{
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: $background;
+    background-color: variables.$background;
     padding: 30px;
 
     &__title {
@@ -224,11 +130,11 @@ li{
         font-weight: 300;
         margin-bottom: 30px;
         font-size: 18px;
-        color: $grey-darken;
+        color: variables.$grey-darken;
     }
 
     &__button {
-        @include button;
+        @include mixins.button;
     }
 }
 
@@ -264,14 +170,14 @@ li{
             align-items: center;
             margin-bottom: 20px;
             height: 78px;
-            background-color: $background;
+            background-color: variables.$background;
             border-radius: 20px;
-            font-weight: $font-weight;
+            font-weight: variables.$font-weight;
             width: 100%;
             position: relative;
             padding-left: 40px;
             padding-right: 15px;
-            @include boxShadow(0, 4px, 15px, 0.15);
+            @include mixins.boxShadow(0, 4px, 15px);
 
             @media (min-width: 768px) {
                 width: 30%;
@@ -279,11 +185,11 @@ li{
 
             &:before{
                 content: counter(nombre);
-                background-color: $color-primary;
+                background-color: variables.$color-primary;
                 border-radius: 50%;
                 padding: 5px 5px;
                 color: white;
-                font-weight: $font-weight;
+                font-weight: variables.$font-weight;
                 display: inline-block;
                 width: 24px;
                 height: 24px;
@@ -298,7 +204,7 @@ li{
                 color: #7E7E7E;
 
                 &--color{
-                    color: $color-primary;
+                    color: variables.$color-primary;
                 }
             }
         } 
@@ -308,7 +214,7 @@ li{
 /*********************** Restaurants ***********************/
 .restaurants {
     padding: 30px;
-    background-color: $background;
+    background-color: variables.$background;
 
     @media(min-width:1200px) {
         padding: 30px 180px;
@@ -344,15 +250,15 @@ li{
     border-radius: 15px;
     background-color: white;
     position: relative;
-    @include boxShadow(0, 4px, 15px, 0.1);
+    @include mixins.boxShadow(0, 4px, 15px, 0.1);
 
     &__nouveau {
         position: absolute;
         top: 13px;
         right: 13px;
-        background-color: $color-tertiary;
+        background-color: variables.$color-tertiary;
         padding: 10px;
-        color: darken($color-tertiary, 50%);
+        color: darken(variables.$color-tertiary, 50%);
         font-weight: 500;
         border-radius: 5px;
     }
@@ -382,69 +288,16 @@ li{
 
             &--solid {
                 opacity: 0;
-                transition: all 1s ease-in-out;
+                transition: all 0.5s ease-in-out;
                 color: transparent;
 
                 &:hover {
                     opacity: 1;
-                    background: linear-gradient($color-primary, $color-secondary);
+                    background: linear-gradient(variables.$color-primary, variables.$color-secondary);
                     background-clip: text;
                     -webkit-background-clip: text;
                 }
             }
         }
     }
-}
-
-/*********************** Footer ***********************/
-.footer {
-    background-color: $grey-darken;
-    color: #fff;
-    list-style-type: none;
-    padding: 20px 30px;
-
-    @media(min-width: 768px) {
-        display: flex;
-        flex-direction: row-reverse;
-    }
-
-    &__title{
-        font-family: $font-title;
-        font-weight: 400;
-        margin-bottom: 20px;
-
-        @media(min-width: 768px) {
-            margin-left: 50px;
-        }
-    }
-
-    &__ul {
-        @media(min-width: 768px) {
-            display: flex;
-            align-items: center;
-        }
-
-        &__li{
-            margin-bottom: 10px;
-
-            @media(min-width: 768px) {
-                margin-bottom: 0;
-                margin-left: 30px;
-            }
-            
-            &__lien {
-                color: white;
-
-                &--bold {
-                    font-weight: 500;
-
-                    & i {
-                        margin-right: 10px;
-                    }
-                }
-            }
-        }
-    }
-
-
 }

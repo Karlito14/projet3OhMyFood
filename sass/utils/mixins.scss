@@ -1,0 +1,22 @@
+@use './variables.scss';
+
+@mixin button {
+    border: none;
+    color: white;
+    background: linear-gradient(variables.$color-secondary, variables.$color-primary);
+    padding: 20px;
+    font-weight: variables.$font-weight;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: all 0.4s ease-out;
+    @include boxShadow(0, 4px, 10px, 0.25);
+
+    &:hover {
+        background: linear-gradient(#f78fd9, #906abe);
+        @include boxShadow(0, 4px, 10px, 0.35);
+    }
+}
+
+@mixin boxShadow($x: 0, $y: 4px, $blur: 7px, $opacity : 0.15) {
+    box-shadow: $x $y $blur rgba(0, 0, 0, $opacity);
+}
