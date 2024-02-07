@@ -299,16 +299,34 @@ li{
     list-style-type: none;
     padding: 20px 30px;
 
+    @media(min-width: 768px) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
     &__title{
         font-family: $font-title;
         font-weight: 400;
         margin-bottom: 20px;
+
+        @media(min-width: 768px) {
+            margin-left: 50px;
+        }
     }
 
     &__ul {
+        @media(min-width: 768px) {
+            display: flex;
+            align-items: center;
+        }
 
         &__li{
             margin-bottom: 10px;
+
+            @media(min-width: 768px) {
+                margin-bottom: 0;
+                margin-left: 30px;
+            }
             
             &__lien {
                 color: white;

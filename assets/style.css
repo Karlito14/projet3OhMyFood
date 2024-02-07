@@ -269,13 +269,36 @@ li {
   list-style-type: none;
   padding: 20px 30px;
 }
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
 .footer__title {
   font-family: "Shrikhand", serif;
   font-weight: 400;
   margin-bottom: 20px;
 }
+@media (min-width: 768px) {
+  .footer__title {
+    margin-left: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .footer__ul {
+    display: flex;
+    align-items: center;
+  }
+}
 .footer__ul__li {
   margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .footer__ul__li {
+    margin-bottom: 0;
+    margin-left: 30px;
+  }
 }
 .footer__ul__li__lien {
   color: white;
