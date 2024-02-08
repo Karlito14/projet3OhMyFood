@@ -147,4 +147,49 @@ li {
   list-style-type: none;
 }
 
+/***************** Bannière *****************/
+.banniere {
+  height: 275px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/***************** Carte *****************/
+.carte {
+  background-color: #F6F6F6;
+  padding: 20px 30px;
+  border-radius: 40px 40px 0 0;
+  margin-top: -40px;
+  position: relative;
+  z-index: 1;
+}
+.carte__div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.carte__div__title {
+  font-family: "Shrikhand", serif;
+}
+.carte__div__icon {
+  position: absolute;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+}
+.carte__div__icon--solid {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  color: transparent;
+}
+.carte__div__icon--solid:hover {
+  opacity: 1;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/***************** Menu *****************/
+
 /*# sourceMappingURL=style-restaurants.css.map */

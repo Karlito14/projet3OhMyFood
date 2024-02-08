@@ -290,15 +290,9 @@ li{
             right: 30px;
 
             &--solid {
-                opacity: 0;
-                transition: all 0.5s ease-in-out;
-                color: transparent;
-
+                @include mixins.iconeCoeur;
                 &:hover {
-                    opacity: 1;
-                    background: linear-gradient(variables.$color-primary, variables.$color-secondary);
-                    background-clip: text;
-                    -webkit-background-clip: text;
+                    @include mixins.changementIcone;
                 }
             }
         }

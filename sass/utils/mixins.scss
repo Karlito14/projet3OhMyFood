@@ -20,3 +20,16 @@
 @mixin boxShadow($x: 0, $y: 4px, $blur: 7px, $opacity : 0.15) {
     box-shadow: $x $y $blur rgba(0, 0, 0, $opacity);
 }
+
+@mixin iconeCoeur {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    color: transparent;
+}
+
+@mixin changementIcone {
+    opacity: 1;
+    background: linear-gradient(variables.$color-primary, variables.$color-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
