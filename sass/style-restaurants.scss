@@ -35,7 +35,7 @@ li{
 /***************** Carte *****************/
 .carte {
     background-color: variables.$background;
-    padding: 20px 30px;
+    padding: 20px 10px;
     border-radius: 40px 40px 0 0;
     margin-top: -40px;
     position: relative;
@@ -46,9 +46,11 @@ li{
         align-items: center;
         justify-content: space-between;
         position: relative;
+        padding: 0 20px;
 
         &__title {
             font-family: variables.$font-title;
+            font-size: 28px;
         }
 
         &__icon {
@@ -65,9 +67,83 @@ li{
             }
         }
     }
+
+    &__divButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__button {
+            @include mixins.button;
+            width: 180px;
+        }
+    }
+    
 }
 
 /***************** Menu *****************/
 .menu {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__div {
+        margin-top: 30px;
+        width: 100%;
+        opacity: 0;
+
+        &:nth-of-type(1) {
+            animation: translate 1s ease-in-out 0s forwards;
+        }
+
+        &:nth-of-type(2) {
+            animation: translate 1s ease-in-out 0.8s forwards;
+        }
+
+        &:nth-of-type(3) {
+            animation: translate 1s ease-in-out 1.6s forwards;
+        }
+
+
+        &__title {
+            font-weight: normal;
+            width: 40px;
+            font-size: 16px;
+            border-bottom: 3px solid #99E2D0;
+            padding-bottom: 7px;
+        }
+
+        &__ul {
+            margin-top: 10px;
+            margin-bottom: 30px;
+
+            &__li {
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 15px;
+                margin-bottom: 20px;
+                transition: all 0.4s ease-in-out;
+                @include mixins.boxShadow(0, 4px, 15px, 0.10);
+
+                &__title {
+                    
+                }
+
+                &__div {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 10px;
+
+                    &__description {
+                        font-size: 15px;
+                    }
+
+                    &__prix {
+                        color: #353535;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
 }
