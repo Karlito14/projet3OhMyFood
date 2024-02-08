@@ -51,6 +51,7 @@ li{
         &__title {
             font-family: variables.$font-title;
             font-size: 28px;
+            margin-right: 30px;
         }
 
         &__icon {
@@ -90,20 +91,6 @@ li{
     &__div {
         margin-top: 30px;
         width: 100%;
-        opacity: 0;
-
-        &:nth-of-type(1) {
-            animation: translate 1s ease-in-out 0s forwards;
-        }
-
-        &:nth-of-type(2) {
-            animation: translate 1s ease-in-out 0.8s forwards;
-        }
-
-        &:nth-of-type(3) {
-            animation: translate 1s ease-in-out 1.6s forwards;
-        }
-
 
         &__title {
             font-weight: normal;
@@ -118,29 +105,77 @@ li{
             margin-bottom: 30px;
 
             &__li {
-                padding: 20px;
                 background-color: #fff;
                 border-radius: 15px;
                 margin-bottom: 20px;
+                position: relative;
                 transition: all 0.4s ease-in-out;
-                @include mixins.boxShadow(0, 4px, 15px, 0.10);
+                cursor: pointer;
+                display: flex;
+                overflow: hidden;
 
-                &__title {
-                    
+                &:hover > &__checked {
+                    margin-right: 0;
                 }
 
-                &__div {
-                    display: flex;
-                    justify-content: space-between;
-                    margin-top: 10px;
+                &:nth-of-type(1) {
+                    animation: translate 1s ease-in-out 0s both;
+                }
+            
+                &:nth-of-type(2) {
+                    animation: translate 1s ease-in-out 0.4s both;
+                }
+            
+                &:nth-of-type(3) {
+                    animation: translate 1s ease-in-out 0.8s both;
+                }
+                @include mixins.boxShadow(0, 4px, 15px, 0.10);
 
-                    &__description {
-                        font-size: 15px;
+                &__div {
+                    overflow: hidden;
+                    padding: 20px 10px;
+
+                    &__title {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        margin-bottom: 5px;
                     }
 
-                    &__prix {
-                        color: #353535;
-                        font-weight: 500;
+                    &__description {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+
+                &__prix {
+                    color: #353535;
+                    font-weight: 500;
+                    margin-left: auto;
+                    padding: 20px;
+                    display: flex;
+                    align-items: flex-end;
+                }
+
+                &__checked {
+                    background-color: variables.$color-tertiary;
+                    border-radius: 0 15px 15px 0;
+                    padding: 20px 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: -60px;
+                    transition: margin-right 0.4s;
+                    width: 55px;
+
+                    &__icon {
+                        font-size: 15px;
+                        background-color: #fff;
+                        padding: 5px;
+                        border-radius: 100%;
+                        color: variables.$color-tertiary;
+
                     }
                 }
             }
