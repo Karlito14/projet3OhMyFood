@@ -8,9 +8,18 @@
     justify-content: center;
     align-items: center;
 
+    &__lien{
+        position: absolute;
+        left: 30px;
+        top: 25px;
+        color: black;
+        z-index: 1;
+    }
+
     &__divImage {
         width: 100%;
         z-index: 1;
+        position: relative;
         @include mixins.boxShadow(0, 2px, 4px);
 
         &__image {

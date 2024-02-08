@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/************************ Header ************************/
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header__lien {
+  position: absolute;
+  left: 30px;
+  top: 25px;
+  color: black;
+  z-index: 1;
+}
+.header__divImage {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+.header__divImage__image {
+  width: 200px;
+  padding: 20px;
+  display: block;
+  margin: 0 auto;
+}
+.header__divInput {
+  width: 100%;
+  position: relative;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.header__divInput__input {
+  width: 100%;
+  text-align: center;
+  background-color: #EAEAEA;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  color: #353535;
+}
+.header__divInput i {
+  position: absolute;
+  left: 28%;
+  top: 19px;
+  color: #353535;
+}
+@media (min-width: 768px) {
+  .header__divInput i {
+    left: 40%;
+  }
+}
+@media (min-width: 1200px) {
+  .header__divInput i {
+    left: 42%;
+  }
+}
+
+/*********************** Footer ***********************/
+.footer {
+  background-color: #353535;
+  color: #fff;
+  list-style-type: none;
+  padding: 20px 30px;
+}
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+.footer__title {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .footer__title {
+    margin-left: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .footer__ul {
+    display: flex;
+    align-items: center;
+  }
+}
+.footer__ul__li {
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .footer__ul__li {
+    margin-bottom: 0;
+    margin-left: 30px;
+  }
+}
+.footer__ul__li__lien {
+  color: white;
+}
+.footer__ul__li__lien--bold {
+  font-weight: 500;
+}
+.footer__ul__li__lien--bold i {
+  margin-right: 10px;
+}
+
+@keyframes flash {
+  0% {
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
+  }
+  90% {
+    color: #FF79DA;
+    text-shadow: none;
+  }
+  100% {
+    color: #9356DC;
+    text-shadow: 0 0 7px #9356DC;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0.95;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/***************** Style Général *****************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*# sourceMappingURL=style-restaurants.css.map */

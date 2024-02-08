@@ -183,20 +183,23 @@ li{
                 width: 30%;
             }
 
-            &:before{
+            &::before{
                 content: counter(nombre);
                 background-color: variables.$color-primary;
-                border-radius: 50%;
-                padding: 5px 5px;
+                border-radius: 100%;
+                padding: 5px 5px 3px;
                 color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 font-weight: variables.$font-weight;
                 display: inline-block;
                 width: 24px;
                 height: 24px;
                 text-align: center;
                 position: absolute;
-                left: -13px;
-                top: 20px;
+                left: -16px;
+                top: 23px;
             }
 
             &__icon {

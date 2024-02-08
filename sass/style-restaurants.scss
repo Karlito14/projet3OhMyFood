@@ -1,0 +1,25 @@
+@use './layout/header.scss';
+@use './layout/footer.scss';
+@use './utils/variables.scss';
+@use './utils/keyframes.scss';
+@use './utils/mixins.scss';
+
+/***************** Style Général *****************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: variables.$font-text;
+}
+
+body {
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
