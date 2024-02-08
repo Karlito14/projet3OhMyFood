@@ -301,7 +301,6 @@ li {
   justify-content: center;
   margin-right: -60px;
   transition: margin-right 0.4s;
-  width: 55px;
 }
 .menu__div__ul__li__checked__icon {
   font-size: 15px;
@@ -309,6 +308,7 @@ li {
   padding: 5px;
   border-radius: 100%;
   color: #99E2D0;
+  margin: 0 8px;
 }
 
 /*# sourceMappingURL=style-restaurants.css.map */

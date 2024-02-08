@@ -167,7 +167,6 @@ li{
                     justify-content: center;
                     margin-right: -60px;
                     transition: margin-right 0.4s;
-                    width: 55px;
 
                     &__icon {
                         font-size: 15px;
@@ -175,7 +174,7 @@ li{
                         padding: 5px;
                         border-radius: 100%;
                         color: variables.$color-tertiary;
-
+                        margin: 0 8px;
                     }
                 }
             }
