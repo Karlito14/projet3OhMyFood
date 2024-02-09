@@ -163,6 +163,11 @@ li {
   width: 100%;
   object-fit: cover;
 }
+@media (min-width: 1200px) {
+  .banniere {
+    height: 375px;
+  }
+}
 
 /***************** Carte *****************/
 .carte {
@@ -173,30 +178,51 @@ li {
   position: relative;
   z-index: 1;
 }
+@media (min-width: 768px) {
+  .carte {
+    width: 80%;
+    margin: -40px auto 0;
+  }
+}
+@media (min-width: 1200px) {
+  .carte {
+    padding: 20px 150px;
+  }
+}
 .carte__div {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  padding: 0 20px;
+  padding: 0 40px 0 20px;
+}
+@media (min-width: 1200px) {
+  .carte__div {
+    justify-content: center;
+  }
 }
 .carte__div__title {
   font-family: "Shrikhand", serif;
   font-size: 28px;
   margin-right: 30px;
 }
-.carte__div__icon {
+.carte__div__divIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carte__div__divIcon__icon {
   position: absolute;
-  right: 20px;
   font-size: 22px;
   cursor: pointer;
 }
-.carte__div__icon--solid {
+.carte__div__divIcon__icon--solid {
   opacity: 0;
   transition: all 0.5s ease-in-out;
   color: transparent;
 }
-.carte__div__icon--solid:hover {
+.carte__div__divIcon__icon--solid:hover {
   opacity: 1;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;

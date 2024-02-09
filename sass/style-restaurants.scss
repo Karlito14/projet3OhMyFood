@@ -29,6 +29,9 @@ li{
     height: 275px;
     width: 100%;
     object-fit: cover;
+    @media (min-width: 1200px) {
+        height: 375px;
+    }
 }
 
 
@@ -41,12 +44,25 @@ li{
     position: relative;
     z-index: 1;
 
+    @media (min-width: 768px) {
+        width: 80%;
+        margin: -40px auto 0
+    }
+
+    @media (min-width: 1200px) {
+        padding: 20px 150px;
+    }
+
     &__div {
         display: flex;
         align-items: center;
         justify-content: space-between;
         position: relative;
-        padding: 0 20px;
+        padding: 0 40px 0 20px;
+
+        @media (min-width: 1200px) {
+            justify-content: center;
+        }
 
         &__title {
             font-family: variables.$font-title;
@@ -54,16 +70,22 @@ li{
             margin-right: 30px;
         }
 
-        &__icon {
-            position: absolute;
-            right: 20px;
-            font-size: 22px;
-            cursor: pointer;
+        &__divIcon {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-            &--solid {
-                @include mixins.iconeCoeur;
-                &:hover {
-                    @include mixins.changementIcone;
+            &__icon {
+                position: absolute;
+                font-size: 22px;
+                cursor: pointer;
+    
+                &--solid {
+                    @include mixins.iconeCoeur;
+                    &:hover {
+                        @include mixins.changementIcone;
+                    }
                 }
             }
         }
