@@ -15,11 +15,21 @@
 }
 @keyframes opacity {
   from {
-    opacity: 0.9;
+    opacity: 0.95;
   }
   to {
     opacity: 0;
     visibility: hidden;
+  }
+}
+@keyframes translate {
+  from {
+    opacity: 0;
+    transform: translateY(-1000px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 /************************ Header ************************/
@@ -29,9 +39,17 @@
   justify-content: center;
   align-items: center;
 }
+.header__lien {
+  position: absolute;
+  left: 30px;
+  top: 25px;
+  color: black;
+  z-index: 1;
+}
 .header__divImage {
   width: 100%;
   z-index: 1;
+  position: relative;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 .header__divImage__image {
@@ -50,6 +68,7 @@
   text-align: center;
   background-color: #EAEAEA;
   border: none;
+  outline: none;
   padding: 20px;
   font-size: 16px;
   color: #353535;
@@ -254,6 +273,7 @@ li {
   border-radius: 25px;
   font-size: 16px;
   transition: all 0.4s ease-out;
+  cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 .intro__button:hover {
@@ -287,10 +307,8 @@ li {
   }
 }
 .fonctionnement__ol__li {
-  list-style-type: none;
   counter-increment: nombre;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   margin-bottom: 20px;
   height: 78px;
@@ -311,20 +329,19 @@ li {
 .fonctionnement__ol__li::before {
   content: counter(nombre);
   background-color: #9356DC;
-  border-radius: 100%;
-  padding: 5px 5px 3px;
+  border-radius: 50%;
+  padding: 5px;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-weight: 500;
-  display: inline-block;
   width: 24px;
   height: 24px;
-  text-align: center;
+  display: grid;
+  place-items: center;
   position: absolute;
   left: -16px;
-  top: 23px;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
 }
 .fonctionnement__ol__li__icon {
   margin-right: 20px;

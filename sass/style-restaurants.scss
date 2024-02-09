@@ -29,7 +29,7 @@ li{
     height: 275px;
     width: 100%;
     object-fit: cover;
-    @media (min-width: 1200px) {
+    @media (min-width: variables.$breakpoint-desktop) {
         height: 375px;
     }
 }
@@ -44,12 +44,12 @@ li{
     position: relative;
     z-index: 1;
 
-    @media (min-width: 768px) {
+    @media (min-width: variables.$breakpoint-tablet) {
         width: 80%;
         margin: -40px auto 0
     }
 
-    @media (min-width: 1200px) {
+    @media (min-width: variables.$breakpoint-desktop) {
         padding: 20px 150px;
     }
 
@@ -60,7 +60,7 @@ li{
         position: relative;
         padding: 0 40px 0 20px;
 
-        @media (min-width: 1200px) {
+        @media (min-width: variables.$breakpoint-desktop) {
             justify-content: center;
         }
 

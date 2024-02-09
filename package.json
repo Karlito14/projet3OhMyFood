@@ -1,10 +1,12 @@
 {
   "name": "ohmyfood",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Troisième projet du parcours Développeur d'Applications JavaScript /React chez Openclassrooms",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch1": "sass --watch sass\\style.scss assets\\style.css",
+    "watch2": "sass --watch sass\\style-restaurants.scss assets\\style-restaurants.css"
   },
   "author": "",
   "license": "ISC",

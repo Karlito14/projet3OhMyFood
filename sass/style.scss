@@ -121,7 +121,7 @@ li{
 
     &__title {
         margin-bottom: 30px;
-        @media (min-width: 768px) {
+        @media (min-width: variables.$breakpoint-tablet) {
             font-size: 40px;
         }
     }
@@ -157,16 +157,14 @@ li{
         justify-content: center;
         align-items: center;
 
-        @media (min-width: 768px) {
+        @media (min-width: variables.$breakpoint-tablet) {
             flex-direction: row;
             justify-content: space-between;
         }
 
         &__li{
-            list-style-type: none;
             counter-increment: nombre;
             display: flex;
-            justify-content: flex-start;
             align-items: center;
             margin-bottom: 20px;
             height: 78px;
@@ -179,27 +177,26 @@ li{
             padding-right: 15px;
             @include mixins.boxShadow(0, 4px, 15px);
 
-            @media (min-width: 768px) {
+            @media (min-width: variables.$breakpoint-tablet) {
                 width: 30%;
             }
 
             &::before{
                 content: counter(nombre);
                 background-color: variables.$color-primary;
-                border-radius: 100%;
-                padding: 5px 5px 3px;
+                border-radius: 50%;
+                padding: 5px;
                 color: white;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 font-weight: variables.$font-weight;
-                display: inline-block;
                 width: 24px;
                 height: 24px;
-                text-align: center;
+                display: grid;
+                place-items: center;
                 position: absolute;
                 left: -16px;
-                top: 23px;
+                top: 50%;
+                transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
             }
 
             &__icon {
@@ -219,7 +216,7 @@ li{
     padding: 30px;
     background-color: variables.$background;
 
-    @media(min-width:1200px) {
+    @media(min-width: variables.$breakpoint-desktop) {
         padding: 30px 180px;
     }
 
@@ -235,12 +232,12 @@ li{
         & a {
             margin-bottom: 20px;
 
-            @media (min-width: 768px) {
+            @media (min-width: variables.$breakpoint-tablet) {
                 margin-bottom: 0;
             }
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: variables.$breakpoint-tablet) {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;

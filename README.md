@@ -39,6 +39,11 @@
 * Secondaire: #FF79DA
 * Tertiaire: #99E2D0
 
-[Démo en ligne](https://karlito14.github.io/projet3OhMyFood/)
+## Tester le projet
+* Pour tester le projet cliquez directement sur [Démo en ligne](https://karlito14.github.io/projet3OhMyFood/)
+
+* Sinon clonez directement le github
+1. Tapez dans votre terminal 'npm install' afin d'installer les dépendances nécessaires
+2. Pour synchroniser sass à vos fichiers css, tapez dans le terminal 'npm run watch1' pour le style de la page principal. Pour les pages restaurants, tapez 'nom run watch2' 
 
 Réalisé par [Carlos Leiroz](https://www.linkedin.com/in/carlos-leiroz/)
