@@ -251,8 +251,9 @@ li{
     background-color: white;
     position: relative;
     @include mixins.boxShadow(0, 4px, 15px, 0.1);
-
-    &__nouveau {
+   
+    &__new::before {
+        content: 'Nouveau';
         position: absolute;
         top: 13px;
         right: 13px;
@@ -261,7 +262,7 @@ li{
         color: darken(variables.$color-tertiary, 50%);
         font-weight: 500;
         border-radius: 5px;
-    }
+    }  
 
     &__img {
         width: 100%;
@@ -287,10 +288,7 @@ li{
             right: 30px;
 
             &--solid {
-                @include mixins.iconeCoeur;
-                &:hover {
-                    @include mixins.changementIcone;
-                }
+                @include mixins.heartIcon;
             }
         }
     }

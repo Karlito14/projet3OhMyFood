@@ -82,10 +82,7 @@ li{
                 cursor: pointer;
     
                 &--solid {
-                    @include mixins.iconeCoeur;
-                    &:hover {
-                        @include mixins.changementIcone;
-                    }
+                    @include mixins.heartIcon;
                 }
             }
         }
