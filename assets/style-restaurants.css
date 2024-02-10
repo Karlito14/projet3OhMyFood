@@ -278,6 +278,9 @@ li {
 .menu__div__ul__li:nth-of-type(3) {
   animation: translate 1s ease-in-out 0.8s both;
 }
+.menu__div__ul__li:nth-of-type(4) {
+  animation: translate 1s ease-in-out 1.2s both;
+}
 .menu__div__ul__li__div {
   overflow: hidden;
   padding: 20px 10px;
