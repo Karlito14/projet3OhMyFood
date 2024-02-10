@@ -1,0 +1,32 @@
+@use '../utils/variables.scss';
+@use '../utils/mixins.scss';
+@use '../utils/keyframes.scss';
+
+/*********************** Introduction ***********************/
+.intro {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$background;
+    padding: 30px;
+
+    &__title {
+        margin-bottom: 30px;
+        @media (min-width: variables.$breakpoint-tablet) {
+            font-size: 40px;
+        }
+    }
+
+    &__paragraphe {
+        font-weight: 300;
+        margin-bottom: 30px;
+        font-size: 18px;
+        color: variables.$grey-darken;
+    }
+
+    &__button {
+        @include mixins.button;
+    }
+}

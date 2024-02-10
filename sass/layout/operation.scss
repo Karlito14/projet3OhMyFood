@@ -1,0 +1,76 @@
+@use '../utils/variables.scss';
+@use '../utils/mixins.scss';
+@use '../utils/keyframes.scss';
+
+/*********************** Fonctionnement ***********************/
+.operation {
+    padding: 50px 30px;
+
+    @media(min-width: 1200px) {
+        padding: 30px 180px;
+    }
+
+    &__title{
+        margin-bottom: 20px;
+    }
+
+    &__ol {
+        counter-reset: nombre;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: variables.$breakpoint-tablet) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        &__li{
+            counter-increment: nombre;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            height: 78px;
+            background-color: variables.$background;
+            border-radius: 20px;
+            font-weight: variables.$font-weight;
+            width: 100%;
+            position: relative;
+            padding-left: 40px;
+            padding-right: 15px;
+            @include mixins.boxShadow(0, 4px, 15px);
+
+            @media (min-width: variables.$breakpoint-tablet) {
+                width: 30%;
+            }
+
+            &::before{
+                content: counter(nombre);
+                background-color: variables.$color-primary;
+                border-radius: 50%;
+                padding: 5px;
+                color: white;
+                font-weight: variables.$font-weight;
+                width: 24px;
+                height: 24px;
+                display: grid;
+                place-items: center;
+                position: absolute;
+                left: -16px;
+                top: 50%;
+                transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+            }
+
+            &__icon {
+                margin-right: 20px;
+                color: #7E7E7E;
+
+                &--color{
+                    color: variables.$color-primary;
+                }
+            }
+        } 
+    }
+}

@@ -1,0 +1,86 @@
+@use '../utils/variables.scss';
+@use '../utils/mixins.scss';
+@use '../utils/keyframes.scss';
+
+/*********************** Restaurants ***********************/
+.restaurants {
+    padding: 30px;
+    background-color: variables.$background;
+
+    @media(min-width: variables.$breakpoint-desktop) {
+        padding: 30px 180px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & a {
+            margin-bottom: 20px;
+
+            @media (min-width: variables.$breakpoint-tablet) {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (min-width: variables.$breakpoint-tablet) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+    }
+}
+
+.article {
+    width: 100%;
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
+    @include mixins.boxShadow(0, 4px, 15px, 0.1);
+   
+    &__new::before {
+        content: 'Nouveau';
+        position: absolute;
+        top: 13px;
+        right: 13px;
+        background-color: variables.$color-tertiary;
+        padding: 10px;
+        color: darken(variables.$color-tertiary, 50%);
+        font-weight: 500;
+        border-radius: 5px;
+    }  
+
+    &__img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+    }
+
+    &__content {
+        color: black;
+        padding: 20px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__title {
+            margin-bottom: 10px;
+        }
+
+        &__icon {
+            font-size: 22px;
+            position: absolute;
+            right: 30px;
+
+            &--solid {
+                @include mixins.heartIcon;
+            }
+        }
+    }
+}
