@@ -270,13 +270,13 @@ li {
   margin-right: 0;
 }
 .menu__div__ul__li:nth-of-type(1) {
-  animation: translate 1s ease-in-out 0s both;
+  animation: translate 1s ease-in-out 0.3s both;
 }
 .menu__div__ul__li:nth-of-type(2) {
-  animation: translate 1s ease-in-out 0.4s both;
+  animation: translate 1s ease-in-out 0.6s both;
 }
 .menu__div__ul__li:nth-of-type(3) {
-  animation: translate 1s ease-in-out 0.8s both;
+  animation: translate 1s ease-in-out 0.9s both;
 }
 .menu__div__ul__li:nth-of-type(4) {
   animation: translate 1s ease-in-out 1.2s both;
