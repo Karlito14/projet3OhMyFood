@@ -5,12 +5,12 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch1": "sass --watch sass\\style.scss assets\\style.css",
-    "watch2": "sass --watch sass\\style-restaurants.scss assets\\style-restaurants.css"
+    "sass": "concurrently \"sass --watch sass\\style.scss assets\\style.css && sass --watch sass\\style-restaurants.scss\" \"sass --watch sass\\style-restaurants.scss assets\\style-restaurants.css\""
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
+    "concurrently": "^8.2.2",
     "sass": "^1.70.0"
   }
 }
