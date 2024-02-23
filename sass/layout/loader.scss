@@ -24,11 +24,10 @@
         animation: flash 1.4s linear infinite;
 
         $numberLetters: 20;
-
         // boucle pour animation des lettres dans le loader
         @for $i from 1 through $numberLetters {
             &:nth-child(#{$i}) {
-                animation-delay: #{$i * 0.1};
+                animation-delay: #{$i * 0.1}s;
             }
         }
     }

@@ -4,7 +4,7 @@
 
 ## Objectifs
 
-* Développerun site en **mobile first**  qui répertorie les menus de restaurants gastronomiques.
+* Développerun site en **mobile first** qui répertorie les menus de restaurants gastronomiques.
 * Dynamiser le site avec de nombreuses animations réalisées uniquement en CSS
 * Site totalement **responsive**
 
@@ -24,8 +24,8 @@
 
 ## Technologies
 
-**Autorisés** : HTML / CSS
-**Recommandés** : Utilisation du préprocesseur SASS
+**Autorisé** : HTML / CSS
+**Recommandé** : Utilisation du préprocesseur SASS
 **Interdit** : JavaScript / Framework CSS
 
 ## Notes

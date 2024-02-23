@@ -140,7 +140,7 @@ li{
                 $itemsNumber : 4;
                 @for $i from 1 through $itemsNumber {
                     &:nth-of-type(#{$i}) {
-                        animation: translate 1s ease-in-out #{$i * 0.3s} both;
+                        animation: translate 1s ease-in-out #{$i * 0.3}s both;
                     }
                 }
 

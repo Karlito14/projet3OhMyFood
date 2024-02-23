@@ -157,7 +157,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 .intro__button:hover {
-  background: linear-gradient(#f78fd9, #906abe);
+  background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
 }
 
@@ -183,64 +183,64 @@
   animation: flash 1.4s linear infinite;
 }
 .loader__letter:nth-child(1) {
-  animation-delay: 0.1;
+  animation-delay: 0.1s;
 }
 .loader__letter:nth-child(2) {
-  animation-delay: 0.2;
+  animation-delay: 0.2s;
 }
 .loader__letter:nth-child(3) {
-  animation-delay: 0.3;
+  animation-delay: 0.3s;
 }
 .loader__letter:nth-child(4) {
-  animation-delay: 0.4;
+  animation-delay: 0.4s;
 }
 .loader__letter:nth-child(5) {
-  animation-delay: 0.5;
+  animation-delay: 0.5s;
 }
 .loader__letter:nth-child(6) {
-  animation-delay: 0.6;
+  animation-delay: 0.6s;
 }
 .loader__letter:nth-child(7) {
-  animation-delay: 0.7;
+  animation-delay: 0.7s;
 }
 .loader__letter:nth-child(8) {
-  animation-delay: 0.8;
+  animation-delay: 0.8s;
 }
 .loader__letter:nth-child(9) {
-  animation-delay: 0.9;
+  animation-delay: 0.9s;
 }
 .loader__letter:nth-child(10) {
-  animation-delay: 1;
+  animation-delay: 1s;
 }
 .loader__letter:nth-child(11) {
-  animation-delay: 1.1;
+  animation-delay: 1.1s;
 }
 .loader__letter:nth-child(12) {
-  animation-delay: 1.2;
+  animation-delay: 1.2s;
 }
 .loader__letter:nth-child(13) {
-  animation-delay: 1.3;
+  animation-delay: 1.3s;
 }
 .loader__letter:nth-child(14) {
-  animation-delay: 1.4;
+  animation-delay: 1.4s;
 }
 .loader__letter:nth-child(15) {
-  animation-delay: 1.5;
+  animation-delay: 1.5s;
 }
 .loader__letter:nth-child(16) {
-  animation-delay: 1.6;
+  animation-delay: 1.6s;
 }
 .loader__letter:nth-child(17) {
-  animation-delay: 1.7;
+  animation-delay: 1.7s;
 }
 .loader__letter:nth-child(18) {
-  animation-delay: 1.8;
+  animation-delay: 1.8s;
 }
 .loader__letter:nth-child(19) {
-  animation-delay: 1.9;
+  animation-delay: 1.9s;
 }
 .loader__letter:nth-child(20) {
-  animation-delay: 2;
+  animation-delay: 2s;
 }
 
 /*********************** Restaurants ***********************/
@@ -388,7 +388,6 @@
   left: -16px;
   top: 50%;
   transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
 }
 .operation__ol__li__icon {
   margin-right: 20px;
