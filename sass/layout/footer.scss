@@ -36,16 +36,18 @@
                 margin-bottom: 0;
                 margin-left: 30px;
             }
+
+            & i {
+                margin-right: 10px;
+                display: inline-block;
+                width: 16px;
+            }
             
             &__link {
                 color: white;
 
                 &--bold {
                     font-weight: 500;
-
-                    & i {
-                        margin-right: 10px;
-                    }
                 }
             }
         }

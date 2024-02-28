@@ -110,6 +110,14 @@ li{
         margin-top: 30px;
         width: 100%;
 
+        // Boucle pour l'affichage des plats en décalé
+        $itemsNumber : 3;
+        @for $i from 1 through $itemsNumber {
+            &:nth-child(#{$i}) {
+                animation: translate 1s ease-in-out #{$i * 0.5}s both;
+            }
+        }
+
         &__title {
             font-weight: normal;
             width: 40px;
@@ -134,14 +142,6 @@ li{
 
                 &:hover > &__checked {
                     margin-right: 0;
-                }
-
-                // Boucle pour l'affichage des plats en décalé
-                $itemsNumber : 4;
-                @for $i from 1 through $itemsNumber {
-                    &:nth-of-type(#{$i}) {
-                        animation: translate 1s ease-in-out #{$i * 0.3}s both;
-                    }
                 }
 
                 @include mixins.boxShadow(0, 4px, 15px, 0.10);
